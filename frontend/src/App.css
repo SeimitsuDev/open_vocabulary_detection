@@ -1,0 +1,254 @@
+:root {
+  --bg-color: #1e1e2e;
+  --text-color: #cdd6f4;
+  --accent-color: #89b4fa;
+  --card-bg: #313244;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.controls {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #45475a;
+  background-color: #181825;
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+input[type="file"] {
+  padding: 0.5rem 0;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: #11111b;
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: 1rem;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  background-color: #585b70;
+  cursor: not-allowed;
+}
+
+.display-area {
+  margin-top: 1rem;
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.canvas-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.result-canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.placeholder-text {
+  color: #a6adc8;
+  font-style: italic;
+}
+
+.folder-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.folder-btn {
+  background-color: #313244;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 0.5rem 1rem;
+  margin-top: 0;
+}
+
+.folder-btn:hover {
+  background-color: var(--accent-color);
+  color: #11111b;
+}
+
+.folder-path {
+  font-size: 0.9rem;
+  color: #a6adc8;
+  word-break: break-all;
+  text-align: left;
+}
+
+.main-btn {
+  margin-top: 1.5rem;
+}
+
+.status-container {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #a6adc8;
+  width: 100%;
+}
+
+.status-title {
+  margin-bottom: 1rem;
+}
+
+.count-msg {
+  font-size: 0.85rem;
+  color: #a6adc8;
+  margin-top: 0.2rem;
+  text-align: left;
+}
+
+.count-msg.warning {
+  color: #fab387;
+  font-weight: bold;
+}
+
+.progress-section {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: #cdd6f4;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 12px;
+  background-color: #181825;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--accent-color);
+  transition: width 0.2s ease;
+}
+
+.console-panel {
+  background-color: #11111b;
+  border: 1px solid #45475a;
+  border-radius: 8px;
+  height: 200px;
+  overflow-y: auto;
+  padding: 0.8rem;
+  text-align: left;
+  font-family: monospace;
+  font-size: 0.85rem;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.console-empty {
+  color: #585b70;
+  font-style: italic;
+}
+
+.console-line {
+  color: #a6adc8;
+}
+
+.console-line.match {
+  color: #a6e3a1;
+  font-weight: bold;
+}
+
+.console-line.skip {
+  color: #f9e2af;
+  font-style: italic;
+}
+
+.custom-count-box {
+  margin-top: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.custom-count-box label {
+  color: #fab387;
+  font-weight: bold;
+}
+
+.count-input {
+  width: 90px !important;
+  padding: 0.5rem !important;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #fab387;
+  background-color: #181825;
+  color: var(--text-color);
+  box-sizing: border-box;
+  outline: none;
+}
+
+.count-input:focus {
+  border-color: var(--accent-color);
+}
